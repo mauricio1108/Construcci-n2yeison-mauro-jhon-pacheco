@@ -1,6 +1,8 @@
 package app.domain.model;
 
 import java.util.Date;
+import java.time.LocalDate;
+import java.time.Period;
 
 public class Patient {
 
@@ -98,4 +100,5 @@ public class Patient {
     public void setMedicalInsurance(MedicalInsurance medicalInsurance) {
         this.medicalInsurance = medicalInsurance;
     }
+    
 }

@@ -35,4 +35,8 @@ public class DiagnosticAidOrder extends Order {
     public void setSpecialistId(String specialistId) { this.specialistId = specialistId; }
     public double getCost() { return cost; }
     public void setCost(double cost) { this.cost = cost; }
+
+    public DiagnosticAidOrder findById(DiagnosticAidOrder order) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
 }

@@ -13,10 +13,13 @@ public class Invoice {
     private String policyNumber;
     private long policyValidityDays;
     private Date policyExpirationDate;
-    private String diagnosis;
+    private String diagnostics;
     private List<MedicationOrder> medications;
     private List<ProcedureOrder> procedures;
     private List<DiagnosticAidOrder> diagnosticAids;
+    private boolean medicine;
+    private Patient patient;
+    private DiagnosticAidOrder order;
 
     public Invoice(String patientName, int patientAge, String patientId, String attendingPhysicianName, String insuranceCompanyName, String policyNumber, long policyValidityDays, Date policyExpirationDate, String diagnosis, List<MedicationOrder> medications, List<ProcedureOrder> procedures, List<DiagnosticAidOrder> diagnosticAids) {
         this.patientName = patientName;
@@ -27,7 +30,7 @@ public class Invoice {
         this.policyNumber = policyNumber;
         this.policyValidityDays = policyValidityDays;
         this.policyExpirationDate = policyExpirationDate;
-        this.diagnosis = diagnosis;
+        this.diagnostics = diagnostics;
         this.medications = medications;
         this.procedures = procedures;
         this.diagnosticAids = diagnosticAids;
@@ -98,12 +101,12 @@ public class Invoice {
         this.policyExpirationDate = policyExpirationDate;
     }
 
-    public String getDiagnosis() {
-        return diagnosis;
+    public String getDiagnostics() {
+        return diagnostics;
     }
 
-    public void setDiagnosis(String diagnosis) {
-        this.diagnosis = diagnosis;
+    public void setDiagnostics(String diagnosis) {
+        this.diagnostics = diagnosis;
     }
 
     public List<MedicationOrder> getMedications() {
@@ -129,4 +132,29 @@ public class Invoice {
     public void setDiagnosticAids(List<DiagnosticAidOrder> diagnosticAids) {
         this.diagnosticAids = diagnosticAids;
     }
+
+    public void setMedicine(boolean medicine) {
+        this.medicine = medicine;
+    }
+    
+    public boolean isMedicine(){
+        return medicine;
+    }
+    
+    public Patient getPatient(){
+        return patient;
+    }
+
+    public void setPatient(Patient patient) {
+        this.patient = patient;
+    }
+    
+    public DiagnosticAidOrder getOrder(){
+        return order;
+    }
+
+    public void setOrder(DiagnosticAidOrder order) {
+        this.order = order;
+    }
+    
 }
