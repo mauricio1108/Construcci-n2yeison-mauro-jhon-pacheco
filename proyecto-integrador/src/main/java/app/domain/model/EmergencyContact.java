@@ -1,5 +1,7 @@
 package app.domain.model;
 
+
+
 public class EmergencyContact {
 
     private String contactName; // Split name and last name
